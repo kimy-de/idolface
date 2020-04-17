@@ -15,12 +15,12 @@ https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg -->
 	<meta name="keywords" content="연예인상 테스트, 인공지능 연예인상, 얼굴상, 얼굴상 테스트, 연예인, 연예인 끼, 비주얼, 아이돌 얼굴, 배우 얼굴, 가수 얼굴, 아나운서 얼굴, 코메디언 얼굴, 아이돌, 배우, 가수, 아나운서, 코메디언">
 	<meta name="author" content="딥러닝호형">
 	<link rel="stylesheet" href="style.css">
-	<link rel="canonical" href="https://entertainer-tnttl.run.goorm.io/entertainer/index.html" />
-	<meta property="og:url" content="https://entertainer-tnttl.run.goorm.io/entertainer/index.html" />
+	<link rel="canonical" href="https://idolface.netlify.app" />
+	<meta property="og:url" content="https://idolface.netlify.app" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="내가 연예인이라니" />
 	<meta property="og:description" content="내 얼굴에는 어떤 끼가 숨어 있을까?" />
-	<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fc0eq42%2FbtqCQpiFhFn%2F8KPaOP9q8PXpJFRL7if55K%2Fimg.jpg" />
+	<meta property="og:image" content=".comimg/thumbnail.jpg" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e96197c6a8f08f9"></script>
@@ -232,16 +232,16 @@ https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg -->
 				});
 				switch (prediction[0].className) {
 					case "idol":
-						resultTitle = "요즘 대세인 아이돌상"
-						resultExplain = "다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 친절하고 활발한 성격으로 어디에서도 인기폭발이며 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 아이돌와 똑 닮았다!"
+						resultTitle = "핵인싸 아이돌상"
+						resultExplain = "여심 저격! 상큼하고 멋져요. 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '남자 결과 아이돌상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "singer":
-						resultTitle = "노래 잘하게 생긴 가수상"
-						resultExplain = "무뚝뚝한 당신의 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 연인에게는 은근히 애교쟁이다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 가수와 닮았다!"
+						resultTitle = "카리스마를 뽐내는 가수상"
+						resultExplain = "언제나 노래방에서의 주인공은 나! 비주얼만 봐도 득음의 기운이 느껴지시네요. 선곡 센스도 짱짱!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '남자 결과 가수상', {
 							'event_category': '남자 결과'
@@ -249,23 +249,23 @@ https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg -->
 						break;
 					case "actor":
 						resultTitle = "매력 넘치는 배우상"
-						resultExplain = "천진난만하고 귀여운 당신은 주변 사람들에게 기쁨을 주는 행복바이러스다! 호기심이 많아 활발하며 귀엽고 순수한 외모로 연인의 보호본능을 자극한다. 존재 자체가 상큼한 당신은 특별한 애교 없이도 연인에게 너무나도 사랑스럽다!"
+						resultExplain = "이목구비가 제대로 배우예요! 매력적이고 사람들에게 좋은 인상을 심어주는 당신은 배우의 기질이 보이십니다!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '남자 결과 배우상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "mc":
-						resultTitle = "지적인 말솜씨 좋은 아나운서상"
-						resultExplain = "무심한 성격에 첫인상은 나쁜 남자 같지만, 알고 보면 따뜻함이 묻어나는 당신! 시크한 매력에 선뜻 다가가지 못하지만 한번 다가가면 헤어나올 수 없는 터프한 매력을 가진 카리스마 있는 남자다."
+						resultTitle = "지적인 아나운서상"
+						resultExplain = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '남자 결과 아나운서상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "comedian":
-						resultTitle = "유쾌한 코메디언상"
-						resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
+						resultTitle = "분위기메이커 코메디언상"
+						resultExplain = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '남자 결과 코메디언상', {
 							'event_category': '남자 결과'
@@ -287,15 +287,15 @@ https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg -->
 				switch (prediction[0].className) {
 					case "idol":
 						resultTitle = "요즘 대세인 아이돌상"
-						resultExplain = "다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 상냥하고 활발한 성격으로 어디에서도 인기폭발이지만, 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 아이돌와 똑 닮았다!"
+						resultExplain = "남심 저격! 모두 녹아 내릴거 같아요. 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '여자 결과 아이돌상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "singer":
-						resultTitle = "노래 잘하게 생긴 가수상"
-						resultExplain = "도도하고 섹시한 당신은 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 애인에게 관심이 받고 싶을 때는 애교도 부릴 줄 아는 귀여운 매력을 가졌다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 가수와 닮았다!"
+						resultTitle = "꿀 보이스 가수상"
+						resultExplain = "언제나 노래방에서의 주인공은 나! 비주얼만 봐도 감미로움이 느껴지시네요. 선곡 센스도 짱짱!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '여자 결과 가수상', {
 							'event_category': '여자 결과'
@@ -303,23 +303,23 @@ https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg -->
 						break;
 					case "actor":
 						resultTitle = "매력 넘치는 배우상"
-						resultExplain = "발랄하고 귀여운 당신은 주변 사람들에게 기쁨을 주는 행복바이러스다! 호기심이 많아 활발하며 귀엽고 순수한 외모로 연인의 보호본능을 자극한다. 존재 자체가 상큼하고 깜찍한 당신은 특별한 애교 없이도 연인에게 너무나도 사랑스럽다!"
+						resultExplain = "이목구비가 제대로 배우예요! 매력적인 인상이 연기에 최적이십니다!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '여자 결과 배우상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "mc":
-						resultTitle = "지적인 말솜씨 좋은 아나운서상"
-						resultExplain = "맑고 영롱한 분위기의 당신은 사슴처럼 차분한 성격의 소유자다. 초롱초롱한 눈망울이 당신의 가장 큰 트레이드마크며 따스하고 온순한 눈빛을 가져 사랑스러움을 항상 머금고 있다! 부끄러움이 많아 애정표현이 낯설은 당신은 연인에게조차 신비한 존재지만 따뜻한 성격으로 연인의 마음을 사로잡는 능력을 가졌다."
+						resultTitle = "지적인 아나운서상"
+						resultExplain = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '여자 결과 아나운서상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "comedian":
-						resultTitle = "유쾌한 코메디언상"
-						resultExplain = "사람을 홀리는 매력을 가진 당신은 선뜻 다가가기 힘든 섹시한 매력을 가졌다. 우아한 외모에 더해 뛰어난 센스의 성격을 가진 당신은 어딜가도 주목받는 주인공이다! 사교적인 성격을 가져 연인에게도 적극적으로 애정표현을 하지만 밀당의 고수인 당신은 연인의 혼을 쏙 빼놓는 매력쟁이다."
+						resultTitle = "분위기메이커 코메디언상"
+						resultExplain = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
 						resultCeleb = "나의 얼굴에 숨어있는 연예인 재능! 70%가 넘으셨다고요!? 정말 멋져요!"
 						gtag('event', '여자 결과 코메디언상', {
 							'event_category': '여자 결과'
