@@ -1,0 +1,332 @@
+
+body {
+  font-family: 'Helvetica', serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #35465d;
+}
+
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #fffffff;
+	color: #1E90FF;
+    background-color: #ffffff;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: solid 1.0px #35465d;
+    background-color: #E0FFFF;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #FFA07A;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #ffffff;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.file-upload-image {
+  max-height: 40%;
+  max-width: 40%;
+  margin: auto;
+  padding: 10px;
+  
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-light .navbar-brand {
+  line-height: 1.68;
+  text-align: left;
+  color: #FF8C00; 
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #FF8C00;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #35465d;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+.upload {
+    width: 40%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.5rem;
+  border-radius: 10px;
+  background-color: rgb(243,255,255);
+}
+
+.idol-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(50,205,50);
+}
+
+.singer-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(138,43,226);
+}
+
+.actor-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(0,191,255);
+}
+
+.mc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(255,215,0);
+}
+
+.comedian-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgb(220,20,60);
+}
+
+.percent-text {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+.entertainer-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+.entertainer-explain {
+    font-size: 1.5rem;
+}
+.idol-entertainer-title {
+    color: #3ba363;
+}
+.idol-entertainer-celeb {
+    color: #3ba363;
+    font-size: 1.2rem;
+}
+.singer-entertainer-title {
+    color:#8A2BE2;
+}
+.singer-entertainer-celeb {
+    color: #8A2BE2;
+    font-size: 1.2rem;
+}
+.actor-entertainer-title {
+    color: #548dd4;
+}
+.actor-entertainer-celeb {
+    color: #548dd4;
+    font-size: 1.2rem;
+}
+.mc-entertainer-title {
+    color: #ff6c0a;
+}
+.mc-entertainer-celeb {
+    color: #ff6c0a;
+    font-size: 1.2rem;
+}
+.comedian-entertainer-title {
+    color: #DC143C;
+}
+.comedian-entertainer-celeb {
+    color: #DC143C;
+    font-size: 1.2rem;
+}
+
+
+/* gender */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 100px;
+	height: 46px;
+	background: #FF0000;
+	display: block;
+	border-radius: 40px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 40px;
+	display: block;
+}
+
+input:checked + label {
+	background: #00BFFF;
+}
+
+input:checked + label:after {
+	left: calc(100% - 0px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 10px;
+}
+
+// centering
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.ad-banner {
+    max-width: 320px;
+}
