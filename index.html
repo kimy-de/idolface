@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +20,7 @@
 	<meta property="og:url" content="https://idolface.netlify.app" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="내가 연예인이라니" />
-	
+
 	<meta property="og:image" content="" />
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" href="/favicon.ico">
@@ -29,15 +28,16 @@
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e96197c6a8f08f9"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163951964-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163951964-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-163951964-1');
-</script>
-
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-163951964-1');
+	</script>
 
 </head>
 
@@ -71,13 +71,13 @@
 			<input type="checkbox" id="gender">
 			<label for="gender">Gender</label>
 		</div>
-		
+
 		<p class="d-flex align-items-center pl-3 pt-4" style="font-size: 25px">남자</p>
 	</section>
 	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	
+
 	<div class="mt-3  container file-upload">
-		
+
 		<div class="image-upload-wrap">
 			<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
 			<div class="drag-text">
@@ -104,26 +104,23 @@
 			</div>
 		</div>
 	</div>
-	
-<div class="mt-2 container d-flex justify-content-center ad-banner">
-        <ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-qdpzogburcqf" 
- data-ad-width   = "320" 
- data-ad-height  = "100"></ins> 
 
-    </div>
+	<div class="mt-2 container d-flex justify-content-center ad-banner">
+		<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-qdpzogburcqf" data-ad-width="320" data-ad-height="100"></ins>
 
-    <div id="coupang" class="container d-flex justify-content-center">
-        <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:220421 });
-</script>
-    </div>	
-	
-    
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-	
-   
+	</div>
+
+	<div id="coupang" class="container d-flex justify-content-center">
+		<script src="https://ads-partners.coupang.com/g.js"></script>
+		<script>
+			new PartnersCoupang.G({
+				id: 220421
+			});
+		</script>
+	</div>
+
+	<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
 	<footer class="footer pt-5 container d-flex justify-content-center">
 		<div>
 			<p>해당 인공지능 모델은 사진을 저장하지 않습니다.</p>
@@ -152,11 +149,8 @@
 				</div>
 				<!-- kakao ad -->
 				<div class="modal-body d-flex justify-content-center">
-                    <ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-1k201ac0lp73t" 
- data-ad-width   = "300" 
- data-ad-height  = "250"></ins> 
-                </div>
+					<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-1k201ac0lp73t" data-ad-width="300" data-ad-height="250"></ins>
+				</div>
 				<div class="modal-footer d-flex justify-content-center">
 					<button type="button p-2" class="try-again-btn" onclick="gaReload2();">
 						<span class="try-again-text">다른 사진으로 재시도</span>
@@ -199,7 +193,6 @@
 				};
 				reader.readAsDataURL(input.files[0]);
 				init().then(function() {
-					console.log("hello");
 					predict();
 					$('#loading').hide();
 				});
@@ -220,12 +213,12 @@
 			$('.image-upload-wrap').removeClass('image-dropping');
 		});
 	</script>
-	
+
 	<script type="text/javascript">
 		let URL;
 		const urlMale = "https://teachablemachine.withgoogle.com/models/HwnvzpZFu/";
 		const urlFemale = "https://teachablemachine.withgoogle.com/models/OpiGa9ZJu/";
-		let model, webcam, labelContainer, class_length;
+		let model, labelContainer, class_length;
 		async function init() {
 			if (document.getElementById("gender").checked) {
 				URL = urlMale;
@@ -247,143 +240,126 @@
 			var image = document.getElementById("face-image")
 			const prediction = await model.predict(image, false);
 			prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
-			console.log(prediction[0].className);
-			var resultTitle, resultExplain, resultCeleb;
+			var resultTitle, resultShow;
+			var resultComment = "외모에 숨어있는 나의 재능";
 			if (document.getElementById("gender").checked) {
-				gtag('event', '동물상 테스트 수행', {
-					'event_category': '동물상 테스트 수행',
+				gtag('event', '연예인상 테스트 수행', {
+					'event_category': '연예인상 테스트 수행',
 					'event_label': '남자'
 				});
 				switch (prediction[0].className) {
 					case "idol":
 						resultTitle = "핵인싸 아이돌상"
-						resultExplain = "여심 저격! 상큼하고 멋져요. 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "여심 저격! 상큼하고 멋져요. 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
 						gtag('event', '남자 결과 아이돌상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "singer":
 						resultTitle = "카리스마를 뽐내는 가수상"
-						resultExplain = "언제나 노래방에서의 주인공은 나! 비주얼만 봐도 득음의 기운이 느껴지시네요. 선곡 센스도 짱짱!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "사람의 마음을 움직이는 목소리! 비주얼만 봐도 득음의 기운이 느껴지시네요. 선곡 센스도 짱짱!!"
 						gtag('event', '남자 결과 가수상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "actor":
 						resultTitle = "매력 넘치는 배우상"
-						resultExplain = "이목구비가 제대로 배우예요! 매력적이고 사람들에게 좋은 인상을 심어주는 당신은 배우의 기질이 보이십니다!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "이목구비가 제대로 배우예요! 매력적이고 사람들에게 좋은 인상을 심어주는 당신은 배우의 기질이 보이십니다!!"
 						gtag('event', '남자 결과 배우상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "mc":
 						resultTitle = "지적인 아나운서상"
-						resultExplain = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
 						gtag('event', '남자 결과 아나운서상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "comedian":
 						resultTitle = "분위기메이커 코메디언상"
-						resultExplain = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
 						gtag('event', '남자 결과 코메디언상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					default:
 						resultTitle = "알수없음"
-						resultExplain = ""
-						resultCeleb = ""
+						resultShow = ""
 						gtag('event', '남자 결과 알수없음', {
 							'event_category': '남자 결과'
 						});
 				}
 			} else {
-				gtag('event', '동물상 테스트 수행', {
-					'event_category': '동물상 테스트 수행',
+				gtag('event', '연예인상 테스트 수행', {
+					'event_category': '연예인상 테스트 수행',
 					'event_label': '여자'
 				});
 				switch (prediction[0].className) {
 					case "idol":
 						resultTitle = "요즘 대세인 아이돌상"
-						resultExplain = "진짜가 나타났다! 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "진짜가 나타났다! 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
 						gtag('event', '여자 결과 아이돌상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "singer":
 						resultTitle = "꿀 보이스 가수상"
-						resultExplain = "언제나 노래방에서의 주인공은 나! 비주얼만 봐도 감미로움이 느껴지시네요. 선곡 센스도 짱짱!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "사람의 마음을 움직이는 목소리! 비주얼만 봐도 감미로움이 느껴지시네요. 선곡 센스도 짱짱!!"
 						gtag('event', '여자 결과 가수상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "actor":
 						resultTitle = "매력 넘치는 배우상"
-						resultExplain = "이목구비가 제대로 배우예요! 매력적인 인상이 연기에 최적이십니다!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "이목구비가 제대로 배우예요! 매력적인 인상이 연기에 최적이십니다!!"
 						gtag('event', '여자 결과 배우상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "mc":
 						resultTitle = "지적인 아나운서상"
-						resultExplain = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
 						gtag('event', '여자 결과 아나운서상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "comedian":
 						resultTitle = "분위기메이커 코메디언상"
-						resultExplain = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
-						resultCeleb = "외모에 숨어있는 나의 재능"
+						resultShow = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
 						gtag('event', '여자 결과 코메디언상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					default:
 						resultTitle = "알수없음"
-						resultExplain = ""
-						resultCeleb = ""
+						resultShow = ""
 						gtag('event', '여자 결과 알수없음', {
 							'event_category': '여자 결과'
 						});
 				}
 			}
 			var title = "<div class='" + prediction[0].className + "-entertainer-title'>" + resultTitle + "</div>"
-			var explain = "<div class='entertainer-explain pt-2'>" + resultExplain + "</div>"
-			var celeb = "<div class='" + prediction[0].className + "-entertainer-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
-			$('.result-message').html(title + explain + celeb);
-			var barWidth;
+			var explain = "<div class='entertainer-explain pt-2'>" + resultShow + "</div>"
+			var commonComment = "<div class='" + prediction[0].className + "-entertainer-commonComment pt-2 pb-2'>" + resultComment + "</div>"
+			$('.result-message').html(title + explain + commonComment);
+			var potential;
 			var barMention;
 			for (let i = 0; i < class_length; i++) {
-				if (prediction[i].probability.toFixed(2) > 0.7) {
-					barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+				if (prediction[i].probability > 0.7) {
+					potential = prediction[i].probability * 100 + "%";
 					barMention = "타고난 외모시네요!"
-					
-				} 
-				else if (prediction[i].probability.toFixed(2) >= 0.4) {
-					barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+				} else if (prediction[i].probability >= 0.4) {
+					potential = prediction[i].probability * 100 + "%";
 					barMention = "끼가 넘치세요!"
-				} 
-				else if (prediction[i].probability.toFixed(2) >= 0.3) {
-					barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+				} else if (prediction[i].probability >= 0.3) {
+					potential = prediction[i].probability * 100 + "%";
 					barMention = "재능이 보여요!"
-				}
-				else if (prediction[i].probability.toFixed(2) >= 0.2) {
-					barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+				} else if (prediction[i].probability >= 0.2) {
+					potential = prediction[i].probability * 100 + "%";
 					barMention = ""
-				
 				} else {
-					barWidth = "5%"
+					potential = "5%"
 					barMention = ""
 				}
 				var labelTitle;
@@ -407,7 +383,7 @@
 						labelTitle = "알수없음"
 				}
 				var label = "<div class='entertainer-label d-flex align-items-center'>" + labelTitle + "</div>"
-				var bar = "<div class='bar-container position-relative container'><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + barMention + " </span></div></div>"
+				var bar = "<div class='bar-container position-relative container'><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + potential + "'><span class='d-block percent-text'>" + barMention + " </span></div></div>"
 				labelContainer.childNodes[i].innerHTML = label + bar;
 			}
 		}
