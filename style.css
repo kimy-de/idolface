@@ -63,7 +63,7 @@ background:#2d2d2d;}
 
 .image-dropping,
 .image-upload-wrap:hover {
-    background-color: #FFA07A;
+    background-color: #FFA500;
     border: 1.5px dashed #ffffff;
 }
 
@@ -172,7 +172,7 @@ background:#2d2d2d;}
 .bar-container {
   height: 2.5rem;
   border-radius: 10px;
-  background-color: rgb(243,255,255);
+  background-color: rgb(255,255,255);
 }
 
 .idol-bar {
@@ -241,6 +241,7 @@ background:#2d2d2d;}
     font-size: 1.5rem;
 	color: #000000;
 }
+
 .idol-entertainer-title {
     color: #3ba363;
 }
