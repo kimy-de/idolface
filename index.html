@@ -9,17 +9,17 @@
 	<meta name="naver-site-verification" content="3e7a9b3e76b0fda9abc1e48dd61cbaa7cfc3859c" />
 	<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<title>내가 연예인이라니</title>
-	<meta name="title" content="내가 연예인이라니">
-	<meta name="subject" content="인공지능이 알려주는 연예인상">
-	<meta name="keywords" content="연예인상 테스트, 인공지능 연예인상, 얼굴상, 얼굴상 테스트, 연예인, 연예인 끼, 비주얼, 아이돌 얼굴, 배우 얼굴, 가수 얼굴, 아나운서 얼굴, 코메디언 얼굴, 아이돌, 배우, 가수, 아나운서, 코메디언">
-	<meta property="og:description" content="내 얼굴에는 어떤 끼가 숨어 있을까?">
-	<meta name="author" content="딥러닝호형">
+	<title>I am a celebrity</title>
+	<meta name="title" content="I am a celebrity">
+	<meta name="subject" content="AI tells you about celebrity face type.">
+	<meta name="keywords" content="AI, entertainment, face type, face test, idol, entertainer, visual, singer, actor, actress, comedian, announcer, 연예인 끼, 비주얼, Idol 얼굴, actor 얼굴, Singer 얼굴, Announcer 얼굴, Comedian 얼굴, Idol, actor, Singer, Announcer, Comedian">
+	<meta property="og:description" content="What is your face type?">
+	<meta name="author" content="Deep Learning Bro">
 	<link rel="stylesheet" href="style.css">
 	<link rel="canonical" href="https://idolface.netlify.app" />
 	<meta property="og:url" content="https://idolface.netlify.app" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="내가 연예인이라니" />
+	<meta property="og:title" content="I Am An Entertainer" />
 
 	<meta property="og:image" content="/thumbnail.jpg" />
 	<link rel="shortcut icon" href="/favicon.ico">
@@ -43,7 +43,7 @@
 
 <body>
 	<nav class="p-3 container navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="https://idolface.netlify.app">내가 연예인이라니</a>
+		<a class="navbar-brand" href="https://idolface.netlify.app">I am an entertainer</a>
 		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -59,20 +59,20 @@
 		</div>-->
 	</nav>
 	<section class="section">
-		<h1 class="title">내가 연예인이라니</h1>
-		<h2 class="subtitle">인공지능이 알려주는 연예인상</h2>
+		<h1 class="title">I am an entertainer</h1>
+		<h2 class="subtitle">AI model that tells your idol face type</h2>
 	</section>
 
-	<h3 class="pb-2 d-flex justify-content-center">먼저 성별을 선택하세요</h3>
+	<h3 class="pb-2 d-flex justify-content-center">Please select your gender</h3>
 	<section class="d-flex justify-content-center">
-		<p class="d-flex align-items-center pr-3 pt-4" style="font-size: 25px">여자</p>
+		<p class="d-flex align-items-center pr-3 pt-4" style="font-size: 25px">Female</p>
 		<!-- checkbox -->
 		<div>
 			<input type="checkbox" id="gender">
 			<label for="gender">Gender</label>
 		</div>
 
-		<p class="d-flex align-items-center pl-3 pt-4" style="font-size: 25px">남자</p>
+		<p class="d-flex align-items-center pl-3 pt-4" style="font-size: 25px">Male</p>
 	</section>
 	<div id="coupang" class="container d-flex justify-content-center">
 		<script src="https://ads-partners.coupang.com/g.js"></script>
@@ -91,16 +91,16 @@
 			<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
 			<div class="drag-text">
 				<img src="img/upload.svg" class="mt-5 pt-5 upload">
-				<h3 class="mb-5 pb-5 pt-4 upload-text">사진을 올리거나 버튼을 눌러서 업로드하세요!</h3>
+				<h3 class="mb-5 pb-5 pt-4 upload-text">Please drag and drop your photo here or press here!</h3>
 			</div>
 		</div>
 		<div class="file-upload-content">
 			<img class="file-upload-image" id="face-image" src="#" alt="your image" />
 			<div id="loading" class="animated bounce">
 				<div class="spinner-border" role="status">
-					<span class="sr-only">인공지능 인식 중...</span>
+					<span class="sr-only">AI recognition...</span>
 				</div>
-				<p class="text-center" style="font-size: 15px">인공지능이 당신의 연예인상을 분석중입니다.</p>
+				<p class="text-center" style="font-size: 15px">AI is analyzing your face type...</p>
 			</div>
 			<p class="result-message"></p>
 			<div id="label-container" class="d-flex flex-column justify-content-around"></div>
@@ -108,7 +108,7 @@
 
 			<div class="pt-3 image-title-wrap">
 				<button type="button p-2" class="try-again-btn" onclick="gaReload1();" data-toggle="modal" data-target="#adModal">
-					<span class="try-again-text">다른 사진으로 재시도</span>
+					<span class="try-again-text">Retry with another photo</span>
 				</button>
 			</div>
 		</div>
@@ -120,25 +120,22 @@
 		<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-qdpzogburcqf" data-ad-width="320" data-ad-height="100"></ins>
 
 	</div>
+	<!--
 <script src="https://ads-partners.coupang.com/g.js"></script>
 <script>
 	new PartnersCoupang.G({ id:223968 });
 </script>
 	<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-
+-->
 	<footer class="footer pt-5 container d-flex justify-content-center">
 		<div>
-			<p>해당 인공지능 모델은 사진을 저장하지 않습니다.</p>
+			<p>This website never store your photo.</p>
 		</div>
 	</footer>
-	<footer class="footer container d-flex justify-content-center">
-		<div>
-			<p>웹사이트는 유튜브 조코딩님의 영상을 참고하여 구현 했습니다.</p>
-		</div>
-	</footer>
+	
 	<footer class="footer pt-0 container d-flex justify-content-center">
 		<div>
-			<p>&copy; 딥러닝호형 2020. All Rights Reserved. </p>
+			<p>&copy; DL Bro 2020. All Rights Reserved. </p>
 		</div>
 	</footer>
 
@@ -147,7 +144,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="adModalLabel">(AD)광고 - 재시도를 한번 더 눌러주세요.</h5>
+					<h5 class="modal-title" id="adModalLabel">(AD) Are you ready again?</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -160,7 +157,7 @@
 				
 				<div class="modal-footer d-flex justify-content-center">
 					<button type="button p-2" class="try-again-btn" onclick="gaReload2();">
-						<span class="try-again-text">다른 사진으로 재시도</span>
+						<span class="try-again-text">Retry with another photo</span>
 					</button>
 				</div>
 			</div>
@@ -168,14 +165,14 @@
 	</div>
 	<script>
 		function gaReload1() {
-			gtag('event', '다른 사진으로 재시도 1차', {
-				'event_category': '다른 사진으로 재시도'
+			gtag('event', 'First retry', {
+				'event_category': 'Retry with another photo'
 			});
 		}
 
 		function gaReload2() {
-			gtag('event', '다른 사진으로 재시도 2차', {
-				'event_category': '다른 사진으로 재시도'
+			gtag('event', 'Second retry', {
+				'event_category': 'Retry with another photo'
 			});
 			window.location.reload();
 		}
@@ -248,7 +245,7 @@
 			const prediction = await model.predict(image, false);
 			prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 			var resultTitle, resultShow;
-			var resultComment = "외모에 숨어있는 나의 재능";
+			var resultComment = "Your hidden talents in your face";
 			if (document.getElementById("gender").checked) {
 				gtag('event', '연예인상 테스트 수행', {
 					'event_category': '연예인상 테스트 수행',
@@ -256,44 +253,44 @@
 				});
 				switch (prediction[0].className) {
 					case "idol":
-						resultTitle = "핵인싸 아이돌상"
-						resultShow = "여심 저격! 상큼하고 멋져요. 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
-						gtag('event', '남자 결과 아이돌상', {
+						resultTitle = "Natural Idol"
+						resultShow = "Are you an idol? Cool. You are very attractive. You make people smile!"
+						gtag('event', '남자 결과 Idol상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "singer":
-						resultTitle = "카리스마를 뽐내는 가수상"
-						resultShow = "사람의 마음을 움직이는 목소리! 비주얼만 봐도 득음의 기운이 느껴지시네요. 선곡 센스도 짱짱!!"
-						gtag('event', '남자 결과 가수상', {
+						resultTitle = "Singer"
+						resultShow = "Sweet voice! You must be a wonderful singer!!"
+						gtag('event', '남자 결과 Singer상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "actor":
-						resultTitle = "매력 넘치는 배우상"
-						resultShow = "이목구비가 제대로 배우예요! 매력적이고 사람들에게 좋은 인상을 심어주는 당신은 배우의 기질이 보이십니다!!"
-						gtag('event', '남자 결과 배우상', {
+						resultTitle = "Actor"
+						resultShow = "You have clear-cut features and talents as an actor!!"
+						gtag('event', '남자 결과 actor상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "mc":
-						resultTitle = "지적인 아나운서상"
-						resultShow = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
-						gtag('event', '남자 결과 아나운서상', {
+						resultTitle = "Announcer"
+						resultShow = "You look very intellectual!!"
+						gtag('event', '남자 결과 Announcer상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					case "comedian":
-						resultTitle = "분위기메이커 코메디언상"
-						resultShow = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
-						gtag('event', '남자 결과 코메디언상', {
+						resultTitle = "Comedian"
+						resultShow = "You are the king of witty banter!!"
+						gtag('event', '남자 결과 Comedian상', {
 							'event_category': '남자 결과'
 						});
 						break;
 					default:
-						resultTitle = "알수없음"
+						resultTitle = "Unknown"
 						resultShow = ""
-						gtag('event', '남자 결과 알수없음', {
+						gtag('event', '남자 결과 Unknown', {
 							'event_category': '남자 결과'
 						});
 				}
@@ -304,44 +301,44 @@
 				});
 				switch (prediction[0].className) {
 					case "idol":
-						resultTitle = "요즘 대세인 아이돌상"
-						resultShow = "진짜가 나타났다! 핵인싸가 되는 외모를 가지셨군요. 얼굴만 봐도 미소 짓게 만드는 당신은 이미 아이돌!!"
-						gtag('event', '여자 결과 아이돌상', {
+						resultTitle = "Natural Idol"
+						resultShow = "Are you an idol? Cool. You are very attractive. You make people smile!"
+						gtag('event', '여자 결과 Idol상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "singer":
-						resultTitle = "꿀 보이스 가수상"
-						resultShow = "사람의 마음을 움직이는 목소리! 비주얼만 봐도 감미로움이 느껴지시네요. 선곡 센스도 짱짱!!"
-						gtag('event', '여자 결과 가수상', {
+						resultTitle = "Singer"
+						resultShow = "Sweet voice! You must be a wonderful singer!!"
+						gtag('event', '여자 결과 Singer상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "actor":
-						resultTitle = "매력 넘치는 배우상"
-						resultShow = "이목구비가 제대로 배우예요! 매력적인 인상이 연기에 최적이십니다!!"
-						gtag('event', '여자 결과 배우상', {
+						resultTitle = "Actor"
+						resultShow = "You are beautiful and have talents as an actress!!"
+						gtag('event', '여자 결과 actor상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "mc":
-						resultTitle = "지적인 아나운서상"
-						resultShow = "우리 어디서 뵌 적 있나요? 지적이고 사람들의 마음을 사로잡는 외모를 가지셨네요!!"
-						gtag('event', '여자 결과 아나운서상', {
+						resultTitle = "Announcer"
+						resultShow = "You look very intellectual!!"
+						gtag('event', '여자 결과 Announcer상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					case "comedian":
-						resultTitle = "분위기메이커 코메디언상"
-						resultShow = "존재 자체 분위기 상승!! 당신은 주변의 사람들을 즐겁게 해줄 잠재력이 보이십니다!!"
-						gtag('event', '여자 결과 코메디언상', {
+						resultTitle = "Comedian"
+						resultShow = "You are the king of witty banter!!"
+						gtag('event', '여자 결과 Comedian상', {
 							'event_category': '여자 결과'
 						});
 						break;
 					default:
-						resultTitle = "알수없음"
+						resultTitle = "Unknown"
 						resultShow = ""
-						gtag('event', '여자 결과 알수없음', {
+						gtag('event', '여자 결과 Unknown', {
 							'event_category': '여자 결과'
 						});
 				}
@@ -355,13 +352,13 @@
 			for (let i = 0; i < class_length; i++) {
 				if (prediction[i].probability > 0.7) {
 					potential = prediction[i].probability * 100 + "%";
-					barMention = "타고난 외모시네요!"
+					barMention = "You have natural good looks!"
 				} else if (prediction[i].probability >= 0.4) {
 					potential = prediction[i].probability * 100 + "%";
-					barMention = "끼가 넘치세요!"
+					barMention = "Your talent is overflowing!"
 				} else if (prediction[i].probability >= 0.3) {
 					potential = prediction[i].probability * 100 + "%";
-					barMention = "재능이 보여요!"
+					barMention = "You have talents!"
 				} else if (prediction[i].probability >= 0.2) {
 					potential = prediction[i].probability * 100 + "%";
 					barMention = ""
@@ -372,22 +369,22 @@
 				var labelTitle;
 				switch (prediction[i].className) {
 					case "idol":
-						labelTitle = "아이돌"
+						labelTitle = "Idol"
 						break;
 					case "singer":
-						labelTitle = "가수"
+						labelTitle = "Singer"
 						break;
 					case "actor":
-						labelTitle = "배우"
+						labelTitle = "actor"
 						break;
 					case "mc":
-						labelTitle = "아나운서"
+						labelTitle = "Announcer"
 						break;
 					case "comedian":
-						labelTitle = "코메디언"
+						labelTitle = "Comedian"
 						break;
 					default:
-						labelTitle = "알수없음"
+						labelTitle = "Unknown"
 				}
 				var label = "<div class='entertainer-label d-flex align-items-center'>" + labelTitle + "</div>"
 				var bar = "<div class='bar-container position-relative container'><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + potential + "'><span class='d-block percent-text'>" + barMention + " </span></div></div>"
@@ -398,8 +395,7 @@
 
 </body>
 <!-- 
-이 코드는 유튜브 조코딩님의 영상을 참고하여 구현 했습니다.
-(https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg)
+조코딩 https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg
 
 image input box
 Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
